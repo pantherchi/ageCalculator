@@ -5,6 +5,9 @@
  */
 package agecalculator;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.Scanner;
 
 /**
@@ -18,7 +21,21 @@ public class AgeCalculator {
      */
     public static void main(String[] args) {
         int[] myArray = dateArray();
-        printArray(myArray);
+        System.out.println(myArray[2]);
+        
+        //method 01
+        Calendar cal = Calendar.getInstance();
+        System.out.println(cal.getTime());
+        
+        SimpleDateFormat sdf = new SimpleDateFormat("Y:M:d");
+        System.out.println( sdf.format(cal.getTime()) );
+        
+        //method 02
+        Date date = new Date();
+        int cYear = date.getYear() + 1900;
+        int cMonth = date.getMonth() + 1;
+        int cDay = date.getDay();
+        System.out.println(cYear+"/"+cMonth+"/"+cDay);
     }
     public static int[] dateArray(){
         Scanner sc = new Scanner(System.in);
@@ -34,11 +51,16 @@ public class AgeCalculator {
         sc.close();
         return intArray;
     }
-    
-    public static void printArray(int[] array){
-        for(int i = 0; i < array.length; i++){
-            System.out.println(array[i]);
-        }
+    public static int calc(){
+        Calendar cal = Calendar.getInstance();
+        SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss");
+        System.out.println( sdf.format(cal.getTime()) );
     }
+
+//    public static void printArray(int[] array){
+//        for(int i = 0; i < array.length; i++){
+//            System.out.println(array[i]);
+//        }
+//    }
     
 }
