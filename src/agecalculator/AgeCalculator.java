@@ -22,6 +22,17 @@ public class AgeCalculator {
         Date bDate = new Date(cYear,bMonth,bDay);
         Date cDate = new Date(cYear,cMonth,cDay);
         daysTill(bDate, cDate, bDay, bMonth, cYear);
+        
+//        Calendar cal = Calendar.getInstance();
+//        int cYear = cal.get(Calendar.YEAR);
+//        int cMonth = cal.get(Calendar.MONTH) + 1;
+//        int cDay = cal.get(Calendar.DAY_OF_MONTH);
+////        System.out.println("Current date: "+cYear + "/" + cMonth + "/" + cDay);
+//        
+//        //to calculate days till
+//        Date bDate = new Date(cYear,bMonth,bDay);
+//        Date cDate = new Date(cYear,cMonth,cDay);
+//        daysTill(bDate, cDate, bDay, bMonth, cYear);
     }
     //this method will get the input from the user!
     public static int[] getDate(){
